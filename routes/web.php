@@ -17,6 +17,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+Route::get("/init/data",[\App\Http\Controllers\SeederController::class,"populateData"]);
+
 Route::get(
     '/{code}',
     [\App\Http\Controllers\UrlController::class, "redirect"]
